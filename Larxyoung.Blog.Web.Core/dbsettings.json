@@ -1,0 +1,12 @@
+{
+  // 数据库连接配置
+  "ConnectionStrings": {
+    "db_mysql": "server=localhost;port=3307;database=Blog;user=root;pwd=ljs@0122!;CharSet=utf8",
+    "db_mongodb": ""
+  },
+  // Redis连接配置
+  "Redis": {
+    "ConnectionStrings": "localhost:6380,password=ljs@0122!",
+    "InstanceName": "Blog_"
+  }
+}

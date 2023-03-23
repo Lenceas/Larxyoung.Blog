@@ -1,0 +1,132 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Larxyoung.Blog.Core</name>
+    </assembly>
+    <members>
+        <member name="T:Larxyoung.Blog.Core.BaseDTOModel">
+            <summary>
+            DTOModel基类
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.BaseDTOModel.ID">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.BaseDTOModel.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.BaseDTOModel.MTime">
+            <summary>
+            修改时间
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.BaseDTOModel.MID">
+            <summary>
+            修改人ID
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.BaseDTOModel.CTime">
+            <summary>
+            创建时间
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.BaseDTOModel.CID">
+            <summary>
+            创建人ID
+            </summary>
+        </member>
+        <member name="T:Larxyoung.Blog.Core.BaseEntity">
+            <summary>
+            实体基类
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.BaseEntity.ID">
+            <summary>
+            主键
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.BaseEntity.Remark">
+            <summary>
+            备注
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.BaseEntity.MTime">
+            <summary>
+            修改时间(UTC)
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.BaseEntity.MID">
+            <summary>
+            修改人ID
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.BaseEntity.CTime">
+            <summary>
+            创建时间(UTC)
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.BaseEntity.CID">
+            <summary>
+            创建人ID
+            </summary>
+        </member>
+        <member name="T:Larxyoung.Blog.Core.ApiVersions">
+            <summary>
+            Api接口版本 自定义
+            </summary>
+        </member>
+        <member name="F:Larxyoung.Blog.Core.ApiVersions.V1">
+            <summary>
+            V1 版本
+            </summary>
+        </member>
+        <member name="F:Larxyoung.Blog.Core.ApiVersions.V2">
+            <summary>
+            V2 版本
+            </summary>
+        </member>
+        <member name="T:Larxyoung.Blog.Core.TestEntity">
+            <summary>
+            测试表
+            </summary>
+        </member>
+        <member name="T:Larxyoung.Blog.Core.TestWebModel">
+            <summary>
+            测试WebModel
+            </summary>
+        </member>
+        <member name="T:Larxyoung.Blog.Core.VerifyCodeGenerator">
+            <summary>
+            验证码生成器
+            </summary>
+        </member>
+        <member name="M:Larxyoung.Blog.Core.VerifyCodeGenerator.GenCode(System.Int32)">
+            <summary>
+            生成随机几位数的验证码
+            </summary>
+            <param name="num"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Larxyoung.Blog.Core.VerifyCodeGenerator.CreateValidateGraphic(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            生成验证码图片
+            </summary>
+            <param name="CodeLength">验证码长度</param>
+            <param name="Width">宽度</param>
+            <param name="Height">高度</param>
+            <param name="FontSize">字体大小</param>
+            <returns></returns>
+        </member>
+        <member name="M:Larxyoung.Blog.Core.VerifyCodeGenerator.GetFont(System.Int32)">
+            <summary>
+            获取字体
+            </summary>
+            <param name="FontSize">字体大小</param>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

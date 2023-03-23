@@ -1,0 +1,28 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+
+
+	<PropertyGroup>
+		<TargetFramework>net7.0</TargetFramework>
+		<NoWarn>1701;1702;1591</NoWarn>
+		<DocumentationFile>Larxyoung.Blog.Web.Core.xml</DocumentationFile>
+	</PropertyGroup>
+
+
+	<ItemGroup>
+		<None Remove="dbsettings.json" />
+		<None Remove="Larxyoung.Blog.Web.Core.xml" />
+	</ItemGroup>
+
+
+	<ItemGroup>
+	  <Content Include="dbsettings.json">
+	    <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+	  </Content>
+	</ItemGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\Larxyoung.Blog.Application\Larxyoung.Blog.Application.csproj" />
+	</ItemGroup>
+
+</Project>

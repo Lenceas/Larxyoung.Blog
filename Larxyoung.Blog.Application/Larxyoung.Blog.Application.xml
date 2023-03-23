@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Larxyoung.Blog.Application</name>
+    </assembly>
+    <members>
+        <member name="T:Larxyoung.Blog.Application.TestWebApiController">
+            <summary>
+            测试接口
+            </summary>
+        </member>
+        <member name="M:Larxyoung.Blog.Application.TestWebApiController.GetTestMsg">
+            <summary>
+            获取一条测试信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Larxyoung.Blog.Application.ITestService.GetTestMsg">
+            <summary>
+            获取一条测试信息
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Larxyoung.Blog.Application.Services.Test.TestService.GetTestMsg">
+            <summary>
+            获取一条测试信息
+            </summary>
+            <returns></returns>
+        </member>
+    </members>
+</doc>

@@ -1,0 +1,71 @@
+﻿{
+  // 配置文件智能提示和校验
+  "$schema": "https://gitee.com/dotnetchina/Furion/raw/v4/schemas/v4/furion-schema.json",
+  // 1.应用配置
+  "AppSettings": {
+    "InjectSpecificationDocument": true // 是否启用规范化文档，生产环境记得关掉
+  },
+  // 2.跨域配置
+  "CorsAccessorSettings": {
+    "WithOrigins": [
+      "http://127.0.0.1:8080",
+      "http://localhost:8080"
+    ],
+    "WithExposedHeaders": [
+      "access-token",
+      "x-access-token",
+      "environment"
+    ]
+  },
+  // 3.验证消息配置
+  "ValidationTypeMessageSettings": {},
+  // 4.依赖注入配置
+  "DependencyInjectionSettings": {},
+  // 5.动态API配置
+  "DynamicApiControllerSettings": {
+    "DefaultRoutePrefix": "api", // 默认路由前缀，string，默认 api
+    "DefaultHttpMethod": "POST", // 默认请求谓词，string，默认：POST
+    "DefaultModule": "v1", // 默认模块名称（区域），可用作接口版本，string，默认：v1
+    "LowercaseRoute": false, // 小写路由格式，bool，默认：true
+    "CamelCaseSeparator": "", // 骆驼（驼峰）命名分隔符，string，默认：-
+    "VersionSeparator": "@" // 版本分隔符，string，默认：@
+  },
+  // 6.友好异常配置
+  "FriendlyExceptionSettings": {},
+  // 7.规范化文档配置
+  "SpecificationDocumentSettings": {
+    "DocumentTitle": "Larxyoung.Blog | 规范化接口",
+    "EnableAuthorized": true, // 是否启用权限控制，bool，默认 true
+    "GroupOpenApiInfos": [
+      {
+        "Group": "V1",
+        "Title": "Larxyoung.Blog API V1",
+        "Description": "Larxyoung.Blog 接口文档",
+        "Version": "1.0.0"
+      },
+      {
+        "Group": "V2",
+        "Title": "Larxyoung.Blog API V2",
+        "Description": "Larxyoung.Blog 接口文档",
+        "Version": "2.0.0"
+      }
+    ]
+  },
+  // 8.多语言配置
+  "LocalizationSettings": {},
+  // 9.JWT配置
+  "JWTSettings": {
+    "ValidateIssuerSigningKey": true, // 是否验证密钥，bool 类型，默认 true
+    "IssuerSigningKey": "RPcXHL*nDN9eSkcnW$2enSJZE7&3kGvl", // 密钥，string 类型，必须是复杂密钥，长度大于 16
+    "ValidateIssuer": true, // 是否验证签发方，bool 类型，默认 true
+    "ValidIssuer": "Lenceas", // 签发方，string 类型
+    "ValidateAudience": true, // 是否验证签收方，bool 类型，默认 true
+    "ValidAudience": "Larxyoung.Blog", // 签收方，string 类型
+    "ValidateLifetim": true, // 是否验证过期时间，bool 类型，默认 true，建议 true
+    "ExpiredTime": 20, // 过期时间，long 类型，单位分钟，默认 20 分钟
+    "ClockSkew": 5, // 过期时间容错值，long 类型，单位秒，默认 5 秒
+    "Algorithm": "HS256" // 加密算法，string 类型，默认 HS256
+  },
+  // 10.规范化结果配置
+  "UnifyResultSettings": {}
+}
