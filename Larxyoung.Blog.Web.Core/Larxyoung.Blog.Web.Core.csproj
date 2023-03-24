@@ -21,6 +21,12 @@
 	  </Content>
 	</ItemGroup>
 
+
+	<ItemGroup>
+	  <PackageReference Include="AspNetCoreRateLimit" Version="5.0.0" />
+	  <PackageReference Include="Microsoft.Extensions.Caching.StackExchangeRedis" Version="7.0.4" />
+	</ItemGroup>
+
 	<ItemGroup>
 		<ProjectReference Include="..\Larxyoung.Blog.Application\Larxyoung.Blog.Application.csproj" />
 	</ItemGroup>

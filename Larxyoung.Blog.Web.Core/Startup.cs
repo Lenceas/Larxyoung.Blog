@@ -1,4 +1,5 @@
-﻿using Microsoft.AspNetCore.Hosting;
+﻿using Mapster;
+using Microsoft.AspNetCore.Hosting;
 using Microsoft.Extensions.Hosting;
 using Newtonsoft.Json;
 using System.Text.Json;
@@ -17,6 +18,16 @@ public class Startup : AppStartup
         services.AddSqlSugarSetup(App.Configuration);
         // 跨域
         services.AddCorsAccessor();
+        // Redis缓存
+        services.AddStackExchangeRedisCache(options =>
+        {
+            // 连接字符串
+            options.Configuration = App.GetConfig<string>("Redis:ConnectionStrings");
+            // 键名前缀
+            options.InstanceName = App.GetConfig<string>("Redis:InstanceName");
+        });
+        // Mapster
+        TypeAdapterConfig.GlobalSettings.Default.PreserveReference(true);
         // 控制器
         services.AddControllers()
                 // Json 序列化配置

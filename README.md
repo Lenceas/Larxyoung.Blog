@@ -18,7 +18,8 @@ Furion.Web.Entry：Web 入口层/启动层
 - [x] 使用 Mapster 处理对象映射；  
 - [x] 支持 CORS 跨域；
 - [x] 封装 JWT 自定义策略授权；
-- [ ] 提供 Redis 做缓存处理；
+- [x] 提供 MemoryCache 做缓存处理；
+- [x] 提供 Redis 做缓存处理；
 - [ ] 添加 IpRateLimiting 做 API 限流处理;
 
 微服务模块：

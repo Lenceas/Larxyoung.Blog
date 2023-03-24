@@ -9,9 +9,15 @@
             测试接口
             </summary>
         </member>
-        <member name="M:Larxyoung.Blog.Application.TestWebApiController.GetTestMsg">
+        <member name="M:Larxyoung.Blog.Application.TestWebApiController.GetTestMsgByMemoryCache">
             <summary>
-            获取一条测试信息
+            获取一条测试信息（内存缓存）
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Larxyoung.Blog.Application.TestWebApiController.GetTestMsgByRedisCache">
+            <summary>
+            获取一条测试信息（Redis缓存）
             </summary>
             <returns></returns>
         </member>
