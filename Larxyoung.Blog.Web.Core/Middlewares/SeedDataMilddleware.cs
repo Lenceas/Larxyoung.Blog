@@ -1,12 +1,15 @@
 ﻿namespace Larxyoung.Blog.Web.Core
 {
     /// <summary>
-    /// 数据种子中间件服务
+    /// 生成数据种子中间件服务
     /// </summary>
     public static class SeedDataMilddleware
     {
-        public static void UseSeedDataMildd(SqlSugarScope db)
+        public static void UseSeedDataMildd(this IApplicationBuilder app, ISqlSugarClient db = null)
         {
+            if (app == null) throw new ArgumentNullException(nameof(app));
+            if (db == null) db = App.GetService<ISqlSugarClient>();
+
             try
             {
                 Console.WriteLine();
@@ -37,7 +40,7 @@
             }
             catch (Exception ex)
             {
-                throw new Exception("【数据种子】错误信息：" + ex.Message);
+                throw new Exception("【生成数据种子】错误信息：" + ex.Message);
             }
         }
     }

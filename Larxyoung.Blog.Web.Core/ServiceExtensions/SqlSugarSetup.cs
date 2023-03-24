@@ -36,15 +36,13 @@
                     // 单例参数配置，所有上下文生效
                     db.Aop.OnLogExecuting = (sql, pars) =>
                     {
-                        // Console.WriteLine(sql);//输出sql
+                        // 输出sql
+                        //Console.WriteLine(sql);
                     };
                 });
 
             // 这边是SqlSugarScope用AddSingleton
             services.AddSingleton<ISqlSugarClient>(sqlSugar);
-
-            // 数据种子
-            SeedDataMilddleware.UseSeedDataMildd(sqlSugar);
         }
     }
 }

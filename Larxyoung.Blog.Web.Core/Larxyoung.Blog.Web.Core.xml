@@ -33,7 +33,7 @@
         </member>
         <member name="T:Larxyoung.Blog.Web.Core.SeedDataMilddleware">
             <summary>
-            数据种子中间件服务
+            生成数据种子中间件服务
             </summary>
         </member>
     </members>

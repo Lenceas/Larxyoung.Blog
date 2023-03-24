@@ -28,8 +28,6 @@ public class Startup : AppStartup
                     options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
                     // 序列化属性名全部小写
                     options.SerializerSettings.ContractResolver = new LowerCasePropertyNameContractResolver();
-                    // 忽略所有 null 属性
-                    //options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
                 })
                 // 注入基础配置和规范化结果
                 .AddInjectWithUnifyResult();
@@ -61,5 +59,7 @@ public class Startup : AppStartup
         {
             endpoints.MapControllers();
         });
+        // 生成数据种子
+        app.UseSeedDataMildd();
     }
 }
