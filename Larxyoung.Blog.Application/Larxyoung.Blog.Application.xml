@@ -27,7 +27,7 @@
             </summary>
             <returns></returns>
         </member>
-        <member name="M:Larxyoung.Blog.Application.Services.Test.TestService.GetTestMsg">
+        <member name="M:Larxyoung.Blog.Application.TestService.GetTestMsg">
             <summary>
             获取一条测试信息
             </summary>

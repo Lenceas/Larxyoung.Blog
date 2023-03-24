@@ -22,6 +22,8 @@
 - [x] 提供`MemoryCache`做缓存处理；
 - [x] 提供`Redis`做缓存处理；
 - [x] 添加`IpRateLimiting`做API限流处理;
+- [x] 添加`雪花算法ID`工具类;
+- [x] 添加`验证码生成器`工具类;
 
 微服务模块：
 - [x] 可配合`Docker`实现容器化；

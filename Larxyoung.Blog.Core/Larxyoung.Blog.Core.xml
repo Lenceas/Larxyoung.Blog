@@ -99,6 +99,17 @@
             测试WebModel
             </summary>
         </member>
+        <member name="T:Larxyoung.Blog.Core.SnowFlakeIDGenerator">
+            <summary>
+            雪花算法ID生成器（获取唯一值的场景可以使用）
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.SnowFlakeIDGenerator.NextLongID">
+            <summary>
+            获取下一个ID
+            </summary>
+            <returns></returns>
+        </member>
         <member name="T:Larxyoung.Blog.Core.VerifyCodeGenerator">
             <summary>
             验证码生成器

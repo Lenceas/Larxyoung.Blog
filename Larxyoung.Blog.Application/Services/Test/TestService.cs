@@ -1,4 +1,4 @@
-﻿namespace Larxyoung.Blog.Application.Services.Test
+﻿namespace Larxyoung.Blog.Application
 {
     public class TestService : SqlSugarRepository<TestEntity>, ITestService, ITransient
     {
@@ -11,7 +11,7 @@
             var list = await base.GetListAsync();
             if (!list.Any())
             {
-                var en = await base.InsertReturnEntityAsync(new TestEntity() { ID = 1 });
+                var en = await base.InsertReturnEntityAsync(new TestEntity() { ID = SnowFlakeIDGenerator.NextLongID });
                 return en.Adapt<TestWebModel>();
             }
             else
