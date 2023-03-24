@@ -10,6 +10,8 @@ public class Startup : AppStartup
 {
     public void ConfigureServices(IServiceCollection services)
     {
+        // IP限流（放最前面）
+        services.AddIpPolicyRateLimitSetup(App.Configuration);
         // 控制台默认格式化器
         services.AddConsoleFormatter();
         // JWT 拦截器
@@ -51,6 +53,8 @@ public class Startup : AppStartup
         {
             app.UseDeveloperExceptionPage();
         }
+        // IP限流
+        app.UseIpLimitMiddle();
         // 规范化结果状态码
         app.UseUnifyResultStatusCodes();
         // Https

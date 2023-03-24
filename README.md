@@ -21,7 +21,7 @@
 - [x] 封装`JWT`自定义策略授权；
 - [x] 提供`MemoryCache`做缓存处理；
 - [x] 提供`Redis`做缓存处理；
-- [ ] 添加`IpRateLimiting`做API限流处理;
+- [x] 添加`IpRateLimiting`做API限流处理;
 
 微服务模块：
 - [x] 可配合`Docker`实现容器化；

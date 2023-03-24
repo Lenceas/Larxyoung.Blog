@@ -31,9 +31,19 @@
             <param name="httpContext"></param>
             <returns></returns>
         </member>
+        <member name="T:Larxyoung.Blog.Web.Core.IpLimitMiddleware">
+            <summary>
+            IPLimit限流 中间件
+            </summary>
+        </member>
         <member name="T:Larxyoung.Blog.Web.Core.SeedDataMilddleware">
             <summary>
             生成数据种子中间件服务
+            </summary>
+        </member>
+        <member name="T:Larxyoung.Blog.Web.Core.IpPolicyRateLimitSetup">
+            <summary>
+            IPLimit限流 启动服务
             </summary>
         </member>
     </members>
