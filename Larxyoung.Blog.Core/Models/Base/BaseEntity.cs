@@ -15,7 +15,7 @@
         /// 备注
         /// </summary>
         [SugarColumn(ColumnDescription = "备注", IsNullable = true, CreateTableFieldSort = 95)]
-        public string Remark { get; set; }
+        public string Remark { get; set; } = string.Empty;
 
         /// <summary>
         /// 修改时间(UTC)
@@ -27,7 +27,7 @@
         /// 修改人ID
         /// </summary>
         [SugarColumn(ColumnDescription = "修改人ID", CreateTableFieldSort = 97)]
-        public long? MID { get; set; }
+        public long? MID { get; set; } = 0;
 
         /// <summary>
         /// 创建时间(UTC)
@@ -39,6 +39,6 @@
         /// 创建人ID
         /// </summary>
         [SugarColumn(ColumnDescription = "创建人ID", CreateTableFieldSort = 99)]
-        public long? CID { get; set; }
+        public long? CID { get; set; } = 0;
     }
 }

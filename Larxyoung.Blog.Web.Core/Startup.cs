@@ -19,19 +19,20 @@ public class Startup : AppStartup
         services.AddCorsAccessor();
         // 控制器
         services.AddControllers()
-                    .AddNewtonsoftJson(options =>
-                    {
-                        // long 类型序列化时转 string
-                        options.SerializerSettings.Converters.AddLongTypeConverters();
-                        // 时间格式化
-                        options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
-                        // 序列化属性名全部小写
-                        options.SerializerSettings.ContractResolver = new LowerCasePropertyNameContractResolver();
-                        // 忽略所有 null 属性
-                        //options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
-                    })
-                    // 注入基础配置和规范化结果
-                    .AddInjectWithUnifyResult();
+                // Json 序列化配置
+                .AddNewtonsoftJson(options =>
+                {
+                    // long 类型序列化时转 string
+                    options.SerializerSettings.Converters.AddLongTypeConverters();
+                    // 时间格式化
+                    options.SerializerSettings.DateFormatString = "yyyy-MM-dd HH:mm:ss";
+                    // 序列化属性名全部小写
+                    options.SerializerSettings.ContractResolver = new LowerCasePropertyNameContractResolver();
+                    // 忽略所有 null 属性
+                    //options.SerializerSettings.NullValueHandling = NullValueHandling.Ignore;
+                })
+                // 注入基础配置和规范化结果
+                .AddInjectWithUnifyResult();
     }
 
     public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
