@@ -7,6 +7,8 @@
   // Redis连接配置
   "Redis": {
     "ConnectionStrings": "localhost:6380,password=ljs@0122!",
-    "InstanceName": "Blog_"
+    "InstanceName": "Blog_",
+    "CaptchaName": "Captcha:",
+    "TokenName": "Token:"
   }
 }

@@ -1,10 +1,15 @@
-﻿global using Furion.DependencyInjection;
+﻿global using Furion;
+global using Furion.DataEncryption;
+global using Furion.DependencyInjection;
 global using Furion.DynamicApiController;
 global using Furion.FriendlyException;
+global using Furion.JsonSerialization;
 global using Larxyoung.Blog.Core;
 global using Mapster;
 global using Microsoft.AspNetCore.Authorization;
 global using Microsoft.AspNetCore.Mvc;
 global using Microsoft.CodeAnalysis;
+global using Microsoft.Extensions.Caching.Distributed;
 global using Microsoft.Extensions.Caching.Memory;
 global using SqlSugar;
+global using System.ComponentModel.DataAnnotations;

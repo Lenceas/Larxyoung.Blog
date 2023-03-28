@@ -27,7 +27,7 @@
         /// 修改人ID
         /// </summary>
         [SugarColumn(ColumnDescription = "修改人ID", CreateTableFieldSort = 97)]
-        public long? MID { get; set; } = 0;
+        public long MID { get; set; } = 0;
 
         /// <summary>
         /// 创建时间(UTC)
@@ -39,6 +39,6 @@
         /// 创建人ID
         /// </summary>
         [SugarColumn(ColumnDescription = "创建人ID", CreateTableFieldSort = 99)]
-        public long? CID { get; set; } = 0;
+        public long CID { get; set; } = 0;
     }
 }

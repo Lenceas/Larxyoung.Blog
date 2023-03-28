@@ -31,6 +31,25 @@
                 Console.WriteLine("Test 测试表 数据初始化成功!");
                 #endregion
 
+                #region 用户表 User
+                db.CodeFirst.SetStringDefaultLength(255).InitTables(typeof(UserEntity));
+                // 初始化超级管理员
+                if (!db.Queryable<UserEntity>().Any(_ => _.ID == 99999 && _.RoleID == 99999))
+                {
+                    db.Insertable(new UserEntity()
+                    {
+                        ID = 99999,
+                        Account = "admin",
+                        Password = MD5Encryption.Encrypt("admin888"),
+                        UserName = "卢杰晟",
+                        RoleID = 99999,
+                        CID = 99999,
+                        MID = 99999,
+                    }).ExecuteCommand();
+                }
+                Console.WriteLine("User 用户表 数据初始化成功！");
+                #endregion
+
                 Console.WriteLine();
                 Console.WriteLine("数据初始化完成!");
                 Console.WriteLine();

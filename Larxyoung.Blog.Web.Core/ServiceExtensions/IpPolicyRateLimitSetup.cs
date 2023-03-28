@@ -18,7 +18,7 @@ namespace Larxyoung.Blog.Web.Core
             services.Configure<IpRateLimitOptions>(Configuration.GetSection("IpRateLimiting"));
             // 从配置加载IP规则
             //services.Configure<IpRateLimitPolicies>(Configuration.GetSection("IpRateLimitPolicies"));
-            // 注入计数器和规则存储
+            // 注入计数器和规则内存存储
             //services.AddSingleton<IIpPolicyStore, MemoryCacheIpPolicyStore>();
             //services.AddSingleton<IRateLimitCounterStore, MemoryCacheRateLimitCounterStore>();
             // 注入计数器和规则分布式缓存存储

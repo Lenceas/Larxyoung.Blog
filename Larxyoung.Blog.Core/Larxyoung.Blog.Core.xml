@@ -89,9 +89,129 @@
             V2 版本
             </summary>
         </member>
+        <member name="T:Larxyoung.Blog.Core.TokenInfo">
+            <summary>
+            Token令牌详细信息
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.TokenInfo.Token">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.TokenInfo.ExpiredTime">
+            <summary>
+            过期时间（单位：分钟）
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.TokenInfo.SpecificExpiredTime">
+            <summary>
+            具体过期时间
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.TokenInfo.UID">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.TokenInfo.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.TokenInfo.RoleID">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.TokenInfo.IsSuperAdmin">
+            <summary>
+            是否超级管理员
+            </summary>
+        </member>
+        <member name="T:Larxyoung.Blog.Core.TokenWebModel">
+            <summary>
+            Token令牌信息
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.TokenWebModel.Token">
+            <summary>
+            令牌
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.TokenWebModel.ExpiredTime">
+            <summary>
+            过期时间（单位：分钟）
+            </summary>
+        </member>
         <member name="T:Larxyoung.Blog.Core.TestEntity">
             <summary>
             测试表
+            </summary>
+        </member>
+        <member name="T:Larxyoung.Blog.Core.UserEntity">
+            <summary>
+            用户表
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.UserEntity.Account">
+            <summary>
+            账号
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.UserEntity.Password">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.UserEntity.UserName">
+            <summary>
+            用户名称
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.UserEntity.RoleID">
+            <summary>
+            角色ID
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.UserEntity.Token">
+            <summary>
+            登录令牌
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.UserEntity.LastLoginTime">
+            <summary>
+            最后登录时间(UTC)
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.UserEntity.LastLoginIP">
+            <summary>
+            最后登录IP地址
+            </summary>
+        </member>
+        <member name="T:Larxyoung.Blog.Core.LoginWebModel">
+            <summary>
+            登录入参WebModel
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.LoginWebModel.ID">
+            <summary>
+            该次登录唯一标识
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.LoginWebModel.UserName">
+            <summary>
+            用户名
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.LoginWebModel.PassWord">
+            <summary>
+            密码
+            </summary>
+        </member>
+        <member name="P:Larxyoung.Blog.Core.LoginWebModel.Captcha">
+            <summary>
+            验证码
             </summary>
         </member>
         <member name="T:Larxyoung.Blog.Core.TestWebModel">

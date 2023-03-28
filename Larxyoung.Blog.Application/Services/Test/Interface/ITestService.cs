@@ -1,5 +1,8 @@
 ﻿namespace Larxyoung.Blog.Application
 {
+    /// <summary>
+    /// 测试表接口类
+    /// </summary>
     public interface ITestService
     {
         /// <summary>

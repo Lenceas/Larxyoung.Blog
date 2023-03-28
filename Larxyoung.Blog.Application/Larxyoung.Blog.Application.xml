@@ -4,6 +4,31 @@
         <name>Larxyoung.Blog.Application</name>
     </assembly>
     <members>
+        <member name="T:Larxyoung.Blog.Application.BaseAuthApiController">
+            <summary>
+            基础权限接口
+            </summary>
+        </member>
+        <member name="M:Larxyoung.Blog.Application.BaseAuthApiController.GetLoginShowCaptcha">
+            <summary>
+            是否启用登录验证码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Larxyoung.Blog.Application.BaseAuthApiController.GetLoginVerifyCode(System.String)">
+            <summary>
+            获取登录图片验证码
+            </summary>
+            <param name="id">该次登录唯一标识</param>
+            <returns>base64Code</returns>
+        </member>
+        <member name="M:Larxyoung.Blog.Application.BaseAuthApiController.Login(Larxyoung.Blog.Core.LoginWebModel)">
+            <summary>
+            登录
+            </summary>
+            <param name="model">登录入参WebModel</param>
+            <returns></returns>
+        </member>
         <member name="T:Larxyoung.Blog.Application.TestWebApiController">
             <summary>
             测试接口
@@ -21,16 +46,82 @@
             </summary>
             <returns></returns>
         </member>
+        <member name="T:Larxyoung.Blog.Application.ITestService">
+            <summary>
+            测试表接口类
+            </summary>
+        </member>
         <member name="M:Larxyoung.Blog.Application.ITestService.GetTestMsg">
             <summary>
             获取一条测试信息
             </summary>
             <returns></returns>
         </member>
+        <member name="T:Larxyoung.Blog.Application.TestService">
+            <summary>
+            测试表接口服务类
+            </summary>
+        </member>
         <member name="M:Larxyoung.Blog.Application.TestService.GetTestMsg">
             <summary>
             获取一条测试信息
             </summary>
+            <returns></returns>
+        </member>
+        <member name="T:Larxyoung.Blog.Application.IUserService">
+            <summary>
+            用户表接口类
+            </summary>
+        </member>
+        <member name="M:Larxyoung.Blog.Application.IUserService.GetLoginShowCaptcha">
+            <summary>
+            是否启用登录验证码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Larxyoung.Blog.Application.IUserService.GetLoginVerifyCode(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取登录图片验证码
+            </summary>
+            <param name="codeLength">验证码长度</param>
+            <param name="width">宽度</param>
+            <param name="height">高度</param>
+            <param name="fontSize">字体大小</param>
+            <returns>返回验证码和base64格式验证码图片字符串</returns>
+        </member>
+        <member name="M:Larxyoung.Blog.Application.IUserService.Login(Larxyoung.Blog.Core.LoginWebModel)">
+            <summary>
+            登录
+            </summary>
+            <param name="model">登录入参WebModel</param>
+            <returns></returns>
+        </member>
+        <member name="T:Larxyoung.Blog.Application.UserService">
+            <summary>
+            用户表接口服务类
+            </summary>
+        </member>
+        <member name="M:Larxyoung.Blog.Application.UserService.GetLoginShowCaptcha">
+            <summary>
+            是否启用登录验证码
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:Larxyoung.Blog.Application.UserService.GetLoginVerifyCode(System.Int32,System.Int32,System.Int32,System.Int32)">
+            <summary>
+            获取登录图片验证码
+            </summary>
+            <param name="codeLength">验证码长度</param>
+            <param name="width">宽度</param>
+            <param name="height">高度</param>
+            <param name="fontSize">字体大小</param>
+            <returns>返回验证码和base64格式验证码图片字符串</returns>
+        </member>
+        <member name="M:Larxyoung.Blog.Application.UserService.Login(Larxyoung.Blog.Core.LoginWebModel)">
+            <summary>
+            登录
+            </summary>
+            <param name="model">登录入参WebModel</param>
             <returns></returns>
         </member>
     </members>
