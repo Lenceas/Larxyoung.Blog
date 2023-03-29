@@ -73,16 +73,27 @@
         {
             try
             {
-                // 根据该次登录唯一标识和验证码验证Redis缓存里的值是否一致
-                var captcha = await _cache.GetStringAsync($"{App.GetConfig<string>("Redis:CaptchaName")}{model.ID}");
-                if (!string.IsNullOrEmpty(captcha) && captcha.Equals(model.Captcha, StringComparison.OrdinalIgnoreCase))
+                // 判断是否启用了登录验证码
+                if (_userService.GetLoginShowCaptcha())
+                {
+                    // 根据该次登录唯一标识和验证码验证Redis缓存里的值是否一致
+                    var captcha = await _cache.GetStringAsync($"{App.GetConfig<string>("Redis:CaptchaName")}{model.ID}");
+                    if (!string.IsNullOrEmpty(captcha) && captcha.Equals(model.Captcha, StringComparison.OrdinalIgnoreCase))
+                    {
+                        var (tokenWebModel, tokenInfo) = await _userService.Login(model);
+                        // 把登录用户信息缓存到Redis
+                        await _cache.SetStringAsync($"{App.GetConfig<string>("Redis:TokenName")}{tokenInfo.UID}", JSON.Serialize(tokenInfo), new DistributedCacheEntryOptions() { SlidingExpiration = TimeSpan.FromMinutes((double)tokenInfo.ExpiredTime) });
+                        return tokenWebModel;
+                    }
+                    else throw Oops.Bah("验证码错误或已过期,请点击验证码刷新并重新登录！");
+                }
+                else
                 {
                     var (tokenWebModel, tokenInfo) = await _userService.Login(model);
                     // 把登录用户信息缓存到Redis
                     await _cache.SetStringAsync($"{App.GetConfig<string>("Redis:TokenName")}{tokenInfo.UID}", JSON.Serialize(tokenInfo), new DistributedCacheEntryOptions() { SlidingExpiration = TimeSpan.FromMinutes((double)tokenInfo.ExpiredTime) });
                     return tokenWebModel;
                 }
-                else throw Oops.Bah("验证码错误或已过期,请点击验证码刷新并重新登录！");
             }
             catch (AppFriendlyException ex)
             {
